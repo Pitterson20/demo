@@ -1,0 +1,80 @@
+   body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px auto;
+            max-width: 800px;
+            color: #333333;
+            line-height: 1.5;
+            padding: 0 20px;
+        }
+
+        /* Línea superior */
+        .top-line {
+            border-top: 2px solid #333333;
+            margin-bottom: 25px;
+        }
+
+        /* Encabezado Principal */
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            color: #000000;
+        }
+
+        .subtitle {
+            color: #5cb85c; /* Color verde para subtítulos */
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 15px 0;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+            font-size: 15px;
+            color: #222222;
+        }
+
+        .contact-info p {
+            margin: 3px 0;
+        }
+
+        /* Secciones */
+        h2.section-title {
+            color: #5cb85c; /* Verde para los títulos de sección */
+            font-size: 16px;
+            font-weight: bold;
+            margin: 25px 0 10px 0;
+        }
+
+        .item-title {
+            color: #337ab7; /* Azul para los nombres de la empresa/escuela */
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .item-date {
+            color: #222222;
+            font-size: 14px;
+            margin: 2px 0 8px 0;
+        }
+
+        .skills-list {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Listas de logros */
+        ul {
+            margin: 5px 0 10px 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .skills-footer {
+            margin-top: 8px;
+            font-size: 14px;
+        }
