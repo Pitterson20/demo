@@ -1,80 +1,154 @@
-   body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 40px auto;
-            max-width: 800px;
-            color: #333333;
-            line-height: 1.5;
-            padding: 0 20px;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        /* Línea superior */
-        .top-line {
-            border-top: 2px solid #333333;
-            margin-bottom: 25px;
-        }
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    background: #e8e8e8;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
 
-        /* Encabezado Principal */
-        h1 {
-            font-size: 32px;
-            font-weight: bold;
-            margin: 0 0 5px 0;
-            color: #000000;
-        }
+main {
+    display: grid;
+    gap: 32px;
+    width: min(100%, 900px);
+    margin: 0 auto;
+}
 
-        .subtitle {
-            color: #5cb85c; /* Color verde para subtítulos */
-            font-size: 18px;
-            font-weight: 600;
-            margin: 0 0 15px 0;
-        }
+.ejercicio {
+    display: grid;
+    gap: 2px;
+    min-height: 360px;
+}
 
-        .contact-info {
-            margin-bottom: 30px;
-            font-size: 15px;
-            color: #222222;
-        }
+.bloque {
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+}
 
-        .contact-info p {
-            margin: 3px 0;
-        }
+/* #ejercicio 1 */
+.ejercicio-1 {
+    grid-template-areas:
+        "a b b"
+        "c d e";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr 1fr;
+    background: #fff;
+}
 
-        /* Secciones */
-        h2.section-title {
-            color: #5cb85c; /* Verde para los títulos de sección */
-            font-size: 16px;
-            font-weight: bold;
-            margin: 25px 0 10px 0;
-        }
+.bloque-a {
+    grid-area: a;
+    background: #1685c0;
+}
 
-        .item-title {
-            color: #337ab7; /* Azul para los nombres de la empresa/escuela */
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0;
-        }
+.bloque-b {
+    grid-area: b;
+    background: #8c969b;
+}
 
-        .item-date {
-            color: #222222;
-            font-size: 14px;
-            margin: 2px 0 8px 0;
-        }
+.bloque-c {
+    grid-area: c;
+    background: #1685c0;
+}
 
-        .skills-list {
-            margin: 0;
-            padding: 0;
-        }
+.bloque-d {
+    grid-area: d;
+    background: #1685c0;
+}
 
-        /* Listas de logros */
-        ul {
-            margin: 5px 0 10px 20px;
-            padding: 0;
-        }
+.bloque-e {
+    grid-area: e;
+    background: #1685c0;
+}
 
-        li {
-            margin-bottom: 4px;
-        }
+/* #ejercicio 2 */
+.ejercicio-2 {
+    grid-template-areas:
+        "header header header"
+        "nav article aside"
+        "footer footer footer";
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 40px minmax(260px, 1fr) 40px;
+    background: #fff;
+}
 
-        .skills-footer {
-            margin-top: 8px;
-            font-size: 14px;
-        }
+.header,
+.nav,
+.article,
+.aside,
+.footer {
+    padding: 8px;
+}
+
+.header,
+.footer {
+    background: #1746c8;
+}
+
+.nav,
+.aside {
+    background: #0786c4;
+}
+
+.article {
+    background: #8c969b;
+}
+
+.header {
+    grid-area: header;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.article {
+    grid-area: article;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    .ejercicio {
+        min-height: 360px;
+    }
+
+    .ejercicio-1 {
+        grid-template-areas:
+            "b b"
+            "c d"
+            "e e";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2fr 1fr 0.7fr;
+    }
+
+    .bloque-a {
+        display: none;
+    }
+
+    .ejercicio-2 {
+        grid-template-areas:
+            "header"
+            "article"
+            "nav"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px minmax(130px, 1fr) 40px 40px 40px;
+    }
+}
